@@ -1,0 +1,16 @@
+# Model Weights & Binary Checkpoints (NEVER COMMIT)
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.ckpt
+*.h5
+*.pkl
+*.pickle
+*.tar
+*.tar.gz
+*.zip
+checkpoints/
+models/
+weights/
