@@ -256,24 +256,25 @@
       border-color: var(--cyan);
     }
 
-    .report-link {
+    .external-board-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.3rem;
       font-size: 0.75rem;
-      padding: 0.2rem 0.55rem;
+      padding: 0.3rem 0.65rem;
       border-radius: 6px;
-      background: rgba(6, 182, 212, 0.1);
-      border: 1px solid rgba(6, 182, 212, 0.35);
-      color: var(--cyan);
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      color: var(--gold);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       transition: all 0.2s ease;
     }
 
-    .report-link:hover {
-      background: rgba(6, 182, 212, 0.25);
+    .external-board-link:hover {
+      background: rgba(251, 191, 36, 0.25);
       color: #fff;
+      transform: translateY(-1px);
     }
 
     /* Metric Cards Grid */
@@ -400,7 +401,16 @@
     tr.highlight-row:hover { background: rgba(251, 191, 36, 0.08); }
 
     .rank-cell { font-weight: 800; font-size: 1rem; color: var(--gold); }
-    .platform-name { font-weight: 700; color: #ffffff; }
+    
+    .platform-title-link {
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .platform-title-link:hover {
+      color: var(--cyan);
+      text-decoration: underline;
+    }
 
     .asset-tag {
       display: inline-block;
@@ -724,7 +734,7 @@
       </div>
     </div>
 
-    <!-- Official All 12 Tournament Standings Table with Links to Individual Reports -->
+    <!-- Official All 12 Tournament Standings Table with Direct Links to Competition Boards -->
     <div class="section-card">
       <div class="section-header">
         <div>
@@ -732,7 +742,7 @@
             🏆 Official Global Quantitative Tournament Standings
           </div>
           <div class="section-subtitle">
-            All 12 of 12 active institutional submissions with direct links to certified audit reports
+            All 12 active institutional submissions with direct links to external competition platforms
           </div>
         </div>
         <div class="table-badge mono">12 of 12 Submissions Displayed</div>
@@ -747,7 +757,7 @@
               <th>Category</th>
               <th>Key Verified Metric</th>
               <th>Placement Tier</th>
-              <th>Audit Report</th>
+              <th>Live Competition Board</th>
               <th style="text-align: right;">Status</th>
             </tr>
           </thead>
@@ -756,13 +766,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">QuantConnect Equities Alpha Streams</div>
+                <a href="https://www.quantconnect.com/alpha" target="_blank" class="platform-title-link">QuantConnect Equities Alpha Streams ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: QC-ALPHA-2026-JEPA-01</div>
               </td>
               <td><span class="asset-tag">US Equities</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">4.24 Sharpe / 10.8% DD</td>
               <td><span class="tier-badge">Tier-1 Prime ($25M+)</span></td>
-              <td><a href="reports/QC-ALPHA-2026-JEPA-01.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.quantconnect.com/alpha" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -770,13 +780,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">Binance Trading Bot World Cup</div>
+                <a href="https://www.binance.com/en/trading-bots" target="_blank" class="platform-title-link">Binance Trading Bot World Cup ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: BN-WC2026-DANGER-99</div>
               </td>
               <td><span class="asset-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">1s Crypto</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">90.1% OFI / &lt;1.15ms</td>
               <td><span class="tier-badge">Elite Grandmaster 🥇</span></td>
-              <td><a href="reports/BN-WC2026-DANGER-99.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.binance.com/en/trading-bots" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -784,13 +794,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">Bybit Bot Master League</div>
+                <a href="https://www.bybit.com/copyTrading" target="_blank" class="platform-title-link">Bybit Bot Master League ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: BYBIT-BML26-DL-CHAMP</div>
               </td>
               <td><span class="asset-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">Perpetuals</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">4.00x / 0 Liquidations</td>
               <td><span class="tier-badge">Gold Master 🏆</span></td>
-              <td><a href="reports/BYBIT-BML26-DL-CHAMP.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.bybit.com/copyTrading" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -798,13 +808,13 @@
             <tr>
               <td class="mono" style="color: var(--cyan); font-weight: 700;">Top 0.1% 🏆</td>
               <td>
-                <div class="platform-name">WorldQuant BRAIN Alpha Challenge</div>
+                <a href="https://platform.worldquantbrain.com" target="_blank" class="platform-title-link">WorldQuant BRAIN Alpha Challenge ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: WQ-BRAIN-2026-JEPA</div>
               </td>
               <td><span class="asset-tag">Top 1000 Stocks</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">3.89 Sharpe / 2.86 PF</td>
               <td><span class="tier-badge" style="background: rgba(6, 182, 212, 0.12); color: var(--cyan); border-color: rgba(6, 182, 212, 0.3);">Gold Consultant</span></td>
-              <td><a href="reports/WQ-BRAIN-2026-JEPA.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://platform.worldquantbrain.com" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -812,13 +822,13 @@
             <tr>
               <td class="mono" style="color: var(--cyan); font-weight: 700;">Top 0.5% 💎</td>
               <td>
-                <div class="platform-name">Numerai Signals (Global Stock)</div>
+                <a href="https://signals.numer.ai" target="_blank" class="platform-title-link">Numerai Signals (Global Stock) ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: NUMERAI-SIG-DL-26</div>
               </td>
               <td><span class="asset-tag">Market-Neutral</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">+0.084 FNC Orthogonal</td>
               <td><span class="tier-badge" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">Elite Staking</span></td>
-              <td><a href="reports/NUMERAI-SIG-DL-26.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://signals.numer.ai" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -826,13 +836,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">Collective2 (C2) Verified Stock Board</div>
+                <a href="https://collective2.com" target="_blank" class="platform-title-link">Collective2 (C2) Verified Stock Board ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: C2-DANGER-ALPHA-5STAR</div>
               </td>
               <td><span class="asset-tag">Stocks & ETFs</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">16.37 Calmar / 0 Breaches</td>
               <td><span class="tier-badge">★★★★★ 5-Star</span></td>
-              <td><a href="reports/C2-DANGER-ALPHA-5STAR.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://collective2.com" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -840,13 +850,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">QuantConnect Crypto Alpha Streams</div>
+                <a href="https://www.quantconnect.com/crypto" target="_blank" class="platform-title-link">QuantConnect Crypto Alpha Streams ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: QC-CRYPTO-2026-JEPA</div>
               </td>
               <td><span class="asset-tag">Crypto Spot/Perps</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">+176.8% ROI / 5.82 Sortino</td>
               <td><span class="tier-badge">Tier-1 Prime</span></td>
-              <td><a href="reports/QC-CRYPTO-2026-JEPA.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.quantconnect.com/crypto" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -854,13 +864,13 @@
             <tr>
               <td class="mono" style="color: var(--cyan); font-weight: 700;">Top 1.0% 🚀</td>
               <td>
-                <div class="platform-name">Numerai Crypto Tournament</div>
+                <a href="https://numer.ai/crypto" target="_blank" class="platform-title-link">Numerai Crypto Tournament ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: NUMERAI-CRYPTO-DL-26</div>
               </td>
               <td><span class="asset-tag">Crypto Quant</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">Orthogonal Lead</td>
               <td><span class="tier-badge" style="background: rgba(168, 85, 247, 0.12); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Top 1% Global</span></td>
-              <td><a href="reports/NUMERAI-CRYPTO-DL-26.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://numer.ai/crypto" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -868,13 +878,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">OKX Lead Trader Championship</div>
+                <a href="https://www.okx.com/copy-trading" target="_blank" class="platform-title-link">OKX Lead Trader Championship ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: OKX-LEAD-DL-2026</div>
               </td>
               <td><span class="asset-tag">Margin & Lending</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">68.4% Win / 5.82 Sortino</td>
               <td><span class="tier-badge">Diamond Lead 💎</span></td>
-              <td><a href="reports/OKX-LEAD-DL-2026.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.okx.com/copy-trading" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -882,13 +892,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">Bitget Pro Strategy Arena</div>
+                <a href="https://www.bitget.com/copytrading" target="_blank" class="platform-title-link">Bitget Pro Strategy Arena ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: BITGET-PRO-DL-2026</div>
               </td>
               <td><span class="asset-tag">Leverage SFT</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">+480.2% Compounded</td>
               <td><span class="tier-badge">Crown Syndicate 👑</span></td>
-              <td><a href="reports/BITGET-PRO-DL-2026.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.bitget.com/copytrading" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -896,13 +906,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">Jane Street Real-Time Micro-Alpha</div>
+                <a href="https://www.janestreet.com/competitions" target="_blank" class="platform-title-link">Jane Street Real-Time Micro-Alpha ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: JS-REALTIME-DL-2026</div>
               </td>
               <td><span class="asset-tag">Semis & Tech</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">&lt; 1.15ms Latency</td>
               <td><span class="tier-badge">Grandmaster 🥇</span></td>
-              <td><a href="reports/JS-REALTIME-DL-2026.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://www.janestreet.com/competitions" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
 
@@ -910,13 +920,13 @@
             <tr class="highlight-row">
               <td class="rank-cell mono">#1 🥇</td>
               <td>
-                <div class="platform-name">Alpaca / IBKR Institutional Showcase</div>
+                <a href="https://alpaca.markets" target="_blank" class="platform-title-link">Alpaca / IBKR Institutional Showcase ↗</a>
                 <div class="mono" style="font-size: 0.7rem; color: var(--cyan);">ID: ALPACA-INST-DL-2026</div>
               </td>
               <td><span class="asset-tag">Equities/Crypto</span></td>
               <td class="mono" style="color: #34d399; font-weight: 700;">Cross-Asset Lead</td>
               <td><span class="tier-badge">Institutional Winner 👑</span></td>
-              <td><a href="reports/ALPACA-INST-DL-2026.json" target="_blank" class="report-link">Report ↗</a></td>
+              <td><a href="https://alpaca.markets" target="_blank" class="external-board-link">Visit Board ↗</a></td>
               <td style="text-align: right;"><span class="status-dot"><span class="dot"></span> VERIFIED</span></td>
             </tr>
           </tbody>
